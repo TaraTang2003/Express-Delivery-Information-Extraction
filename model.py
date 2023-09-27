@@ -106,9 +106,6 @@ class BiGRU_CRF(nn.Module):
         loss = self.crf(tag_scores, label_ids, mask) * (-1)
         return tag_scores, loss
 
-def set_sccore(total_correct, total_samples):
-
-
 if __name__ == "__main__":
     # load dataset
     train_ds = NerDataset('./express_ner/train.txt')
